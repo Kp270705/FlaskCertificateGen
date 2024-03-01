@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body>
+
+    <div class="tableee">
+
+        <table>
+
+            <tr>
+                <th>s. no.</th>
+                <th> Duration</th>
+                <th> Calories </th>
+                <th> Pulse </th>
+                <th> Maxpulse</th>
+            </tr>
+
+
+            {% for wd in csvData %}
+            <tr>
+                <td> {{wd.duration}} </td>
+                <td> {{wd.calories}} </td>
+                <td> {{wd.pulse}} </td>
+                <td> {{wd.maxpulse}} </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</body>
+
+{% endblock %}

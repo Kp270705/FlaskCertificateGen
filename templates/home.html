@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<main>
+  <div class="info">
+    <h1 align="center"> I am home page of automatic certificate generator </h1>
+  </div>
+
+  <body>
+
+    <div class="formUploading">
+      <form action="/csv" method="post" enctype="multipart/form-data">
+
+        
+        <div class="instruction ">
+          <h2 align="center"> <u> give your Excel file here 👇 👇 </u> </h2>
+          <br>
+          <hr>
+        </div>
+
+        <div class="mb-3" align="center">
+          <input type="file" name="file" id="formfile" multiple="multiple"> <br>
+          <button type="submit" class="btn btn-success mt-3"> Upload csv </button>
+        </div>
+
+
+      </form>
+    </div>
+
+  </body>
+
+</main>
+
+
+{% endblock %}
