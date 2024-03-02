@@ -41,17 +41,6 @@ with open(csv_file_path, 'r') as file:
     
 # =============================================================================================
 
-# print(f"Enter the range from which you want to print your list:")
-# low_val=int(input("\n Enter the lower value: "))
-# high_val=int(input("\n Enter the higher value: "))
-
-
-# for wrkData in workout_data[(low_val-1):(high_val)]:
-#     i+=1
-#     index=low_val
-#     print(f"\n--------------------------------\nRow{low_val}:\nNo of calories: {wrkData.calories},\nNo. of pulse: {wrkData.pulse}, \nNo. of maxpulse: {wrkData.maxpulse}, \nNo. of duration: {wrkData.duration} \n--------------------------------")
-
-#     low_val+=1
     
     
     
