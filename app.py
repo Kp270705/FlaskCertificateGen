@@ -62,7 +62,7 @@ def upload_file():
 
 @app.route("/csvFile")
 def showcsv():
-    return render_template("yourData.html")
+    return render_template("yourData.html", data=csvData)
 
 
 @app.route("/registeration")
