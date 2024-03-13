@@ -23,9 +23,9 @@ def allowed_file(filename):
 
 def ProcessData():  # which get data from csv files:
     i=0
-    workoutdata = WorkoutData()
+    global csvData
     csvData = WorkoutData()
-    print(f"First object calories is: {workoutdata[0].calories}")
+    # print(f"First object calories is: {workoutdata[0].calories}")
     for wd in csvData:
         i+=1
         print(f"\n==========\n\nData of Row{i}:-\n----------\na>. | Duration of workout: {wd.duration}\nb>. | Total number of calories burned during workout: {wd.calories}\nc>. | Average Pulse-rate during workout: {wd.pulse}\nd>. | Maximum pulse-rate achieved during workout: {wd.maxpulse}")
