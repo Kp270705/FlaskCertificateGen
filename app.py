@@ -28,7 +28,7 @@ def ProcessData():  # which get data from csv files:
     print(f"First object calories is: {workoutdata[0].calories}")
     for wd in csvData:
         i+=1
-        print(f"\n==========\n\nData of Row{i}:-\n----------\na>. Duration of workout: {wd.duration}\nb>. Total number of calories burned during workout: {wd.calories}\nc>. Average Pulse-rate during workout: {wd.pulse}\nd>. Maximum pulse-rate achieved during workout: {wd.maxpulse}")
+        print(f"\n==========\n\nData of Row{i}:-\n----------\na>. | Duration of workout: {wd.duration}\nb>. | Total number of calories burned during workout: {wd.calories}\nc>. | Average Pulse-rate during workout: {wd.pulse}\nd>. | Maximum pulse-rate achieved during workout: {wd.maxpulse}")
     print(f"\n\tThere are {i} rows of data in given csv file.\n")
 
 
@@ -65,9 +65,15 @@ def showcsv():
     return render_template("yourData.html")
 
 
+@app.route("/registeration")
+def register():
+    return render_template("register.html")
+
+
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 if __name__  ==  "__main__":
     app.run(debug=1, port=5001)
