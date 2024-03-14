@@ -59,22 +59,22 @@ def upload_file():
     return render_template("home.html")
 
 
-
+#use to show user given data in new page:
 @app.route("/csvFile")
 def showcsv():
     return render_template("yourData.html", data=csvData)
 
-
+# use to navigate to registration page:
 @app.route("/registeration")
 def register():
     return render_template("register.html")
 
-
+# home page: 
 @app.route("/")
 def home():
     return render_template("home.html")
 
-
+# driver code: 
 if __name__  ==  "__main__":
     app.run(debug=1, port=5001)
     
