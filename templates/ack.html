@@ -1,3 +1,19 @@
+<style>
+
+    .h3{
+        background-color: lightgreen;
+        display: inline;
+        margin: 0px 0px 0px 30px;
+    }
+
+    .h3b{
+        background-color: lightgreen;
+        display: inline;
+        margin: 0px 0px 0px 350px;
+    }
+
+</style>
+
 {% extends "base.html" %}
 {% block content %}
 
@@ -7,13 +23,14 @@
 
     <p style="margin-top: 51px; margin-left: 450px;"> wait for a while. 🫰 🫰 </p>
 
-    <div class="prev">
-        <a href="/csv">go to back </a>
-    </div>
-    <h1>
-        Check your data here:
-        <a href="/csvFile"> here</a>
-    </h1>
+
+    <h3 class="h3" >
+        Check your data here--> <a href="/csvFile"> data </a>
+    </h3>
+    
+    <h3 class="h3 h3b" >
+        go to home--> <a href="/csv"> home </a> 
+    </h3>
 
 </div>
 
