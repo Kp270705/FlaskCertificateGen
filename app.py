@@ -14,14 +14,14 @@ app.secret_key = uuid.uuid4().hex
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-
+# check file extension:
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 
-def ProcessData():  # which get data from csv files:
+def ProcessData():  # which get data from operated csv files:
     i=0
     global csvData
     csvData = WorkoutData()
@@ -32,7 +32,7 @@ def ProcessData():  # which get data from csv files:
     print(f"\n\tThere are {i} rows of data in given csv file.\n")
 
 
-
+# check file exist or not, if exist then process task:
 @app.route('/csv', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
@@ -69,8 +69,13 @@ def showcsv():
 def register():
     return render_template("register.html")
 
-# home page: 
+# landing page:
 @app.route("/")
+def landingPage():
+    return render_template("landing.html")
+
+# home page: 
+@app.route("/home")
 def home():
     return render_template("home.html")
 
