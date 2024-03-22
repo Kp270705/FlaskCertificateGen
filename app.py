@@ -6,7 +6,6 @@ from csvFunc import WorkoutData
 UPLOAD_FOLDER = 'csvUploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv', 'xlsx'}
 
-
 csvData = []
 
 app=Flask(__name__)
